@@ -2,7 +2,7 @@ pcbz=3.55;
 r1=13.45;
 r2=15.00;
 h1=3.5;
-h2=30;
+h2=20;
 shell=3;
 module tube(){
 	difference(){
@@ -41,24 +41,32 @@ module cover(){
 	translate([r2+2*shell,0.0,-0.5*h1])cube([2*shell,2*(r2+2*shell),h1],center=true);
 	translate([-(r2+2*shell),0.0,-0.5*h1])cube([2*shell,2*(r2+2*shell),h1],center=true);
 }
-module platform(){
-	w=85;//y
+module platform(){	
 	h=56;//x
-	r=3.0;//round radius
-	hr=1.4;
+	w=85;//y
+	r=3.5;//round radius
+	hr=1.4;	
+	hh=49;//x
+	hw=58;//y
+ 	yshift=-1;
 	difference(){
 		roundrect(h,w,r);
-		translate([-(h-r)/2,+(w-r)/2])cylinder(h=shell,r=hr,$fn=360);
-		translate([+(h-r)/2,+(w-r)/2])cylinder(h=shell,r=hr,$fn=360);
-		translate([-(h-r)/2,+(w-r)/2-58])cylinder(h=shell,r=hr,$fn=360);
-		translate([+(h-r)/2,+(w-r)/2-58])cylinder(h=shell,r=hr,$fn=360);
-	}
-}
+		//translate([-(h-r)/2,+(w-r)/2])cylinder(h=shell,r=hr,$fn=360);
+		//translate([+(h-r)/2,+(w-r)/2])cylinder(h=shell,r=hr,$fn=360);
+		//translate([-(h-r)/2,+(w-r)/2-58])cylinder(h=shell,r=hr,$fn=360);
+		//translate([+(h-r)/2,+(w-r)/2-58])cylinder(h=shell,r=hr,$fn=360);
+		translate([-hh/2,yshift+(w-r)/2,0])cylinder(h=shell,r=hr,$fn=360);
+		translate([+hh/2,yshift+(w-r)/2,0])cylinder(h=shell,r=hr,$fn=360);
+		translate([-hh/2,yshift+(w-r)/2-58,0])cylinder(h=shell,r=hr,$fn=360);
+		translate([+hh/2,yshift+(w-r)/2-58,0])cylinder(h=shell,r=hr,$fn=360);
+	}	
+} 
+
 module roundrect(h,w,r){
-	translate([-(h-r)/2,-(w-r)/2])cylinder(h=shell,r=r,$fn=360);
-	translate([-(h-r)/2,+(w-r)/2])cylinder(h=shell,r=r,$fn=360);
-	translate([+(h-r)/2,-(w-r)/2])cylinder(h=shell,r=r,$fn=360);
-	translate([+(h-r)/2,+(w-r)/2])cylinder(h=shell,r=r,$fn=360);
+	translate([-(h-r)/2,-(w-r)/2,0])cylinder(h=shell,r=r,$fn=360);
+	translate([-(h-r)/2,+(w-r)/2,0])cylinder(h=shell,r=r,$fn=360);
+	translate([+(h-r)/2,-(w-r)/2,0])cylinder(h=shell,r=r,$fn=360);
+	translate([+(h-r)/2,+(w-r)/2,0])cylinder(h=shell,r=r,$fn=360);
 	translate([0,0,shell/2.0])cube([h+r,w-r,shell],center=true);
 	translate([0,0,shell/2.0])cube([h-r,w+r,shell],center=true);
 }
@@ -69,17 +77,14 @@ union(){
 	difference(){
 		cover();
 		picam();
-		tube();
 	}
-}
-
+} 
 
 //tube
-translate([0,0,-30]){
+translate([0,0,-20]){
 	difference(){
 		tube();
 		cover();
 		picam();
-
 	}
 }
