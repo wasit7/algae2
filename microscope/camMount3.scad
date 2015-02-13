@@ -1,5 +1,5 @@
 pcbz=3.55;
-r1=13.45;
+r1=13.6;
 r2=15.00;
 h1=3.5;
 h2=20;
@@ -71,20 +71,42 @@ module roundrect(h,w,r){
 	translate([0,0,shell/2.0])cube([h-r,w+r,shell],center=true);
 }
 
+module holes(){
+	hr=1.5;//hole radius
+	x=r2+3*shell;//x distancw for o to surface of the side cover
+	hsr=2.5;//housing radious
+	hsh=2;//housing height
+	//holes
+	translate([x,r2,0])rotate([0,-90,0])cylinder(h=3.5*shell,r=hr,$fn=360);
+	translate([x,-r2,0])rotate([0,-90,0])cylinder(h=3.5*shell,r=hr,$fn=360);
+	translate([-x,r2,0])rotate([0,90,0])cylinder(h=3.5*shell,r=hr,$fn=360);
+	translate([-x,-r2,0])rotate([0,90,0])cylinder(h=3.5*shell,r=hr,$fn=360);
+	//housing
+	translate([x+0.01,r2,0])rotate([0,-90,0])cylinder(h=hsh,r=hsr,$fn=360);
+	translate([x+0.01,-r2,0])rotate([0,-90,0])cylinder(h=hsh,r=hsr,$fn=360);
+	translate([-x-0.01,r2,0])rotate([0,90,0])cylinder(h=hsh,r=hsr,$fn=360);
+	translate([-x-0.01,-r2,0])rotate([0,90,0])cylinder(h=hsh,r=hsr,$fn=360);
+}
+
+/*
 //cover
 union(){
 	translate([0,-11,7])platform();
 	difference(){
 		cover();
 		picam();
+		holes();
 	}
 } 
-
+*/
 //tube
-translate([0,0,-20]){
+translate([0,0,0]){
 	difference(){
 		tube();
 		cover();
 		picam();
+		holes();
 	}
 }
+
+
