@@ -65,7 +65,8 @@ target/
 #private
 _private/
 
-#pickle
+#from training
 *.pic
 *.pyc
 *.tree
+*.obj
