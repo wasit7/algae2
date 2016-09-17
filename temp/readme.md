@@ -3,6 +3,7 @@ by Wasit Limprasert
 
 # algae_marker.py 
 To label objects,
+
 1. put all images (*.jpg) in folder /dataset
 2. Press number key (0 to 9) to select calss of object. There are avialable 10 classes
 3. [left click] or ctrl + [left click] on image to label the area of object
