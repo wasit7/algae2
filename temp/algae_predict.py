@@ -21,7 +21,7 @@ for i in train_pairs:
     oim=cv2.imread(i['raw'])#BGR
     im=cv2.resize(oim, (cmax,rmax),interpolation = cv2.INTER_CUBIC) 
     
-    with open('forest.pic','rb') as f:
+    with open(os.path.join(dataset_path,'forest.pic'),'rb') as f:
         forest = pickle.load(f)
     cl_p=forest.predict( x )
 
@@ -35,9 +35,14 @@ for i in train_pairs:
                 ol[r+hws,c+hws] = cmap[0]
     cv2.imshow('predict', ol)
     
-    from skimage import measure
-    blobs_labels,num = measure.label(cl_p, background=0,return_num=True,connectivity=2)
+    from skimage import measure, filters
+    from skimage.filters import threshold_otsu
+    a=filters.gaussian_filter(cl_p.astype(float), sigma=1.5)
+    thresh = threshold_otsu(a)
+    binary = a > thresh
+    blobs_labels,num = measure.label(binary, background=0,return_num=True,connectivity=2)
     print 'totol object is %d'%num
-    cv2.imshow('count',blobs_labels*255)
+    cv2.imshow('count',blobs_labels*1024)
+    print "Press space to predict next image"
     if cv2.waitKey(0) == ord(' '):
         pass

@@ -53,7 +53,7 @@ def get_xy(train_pairs):
     k=0
     for i in train_pairs:    
         cl,im,lbp=get_image_pair(i)
-        show_overlay(cl,im)
+        #show_overlay(cl,im)
         if im.shape[0]!=rmax or im.shape[1]!=cmax or lbp.shape[0]!=rmax or lbp.shape[1]!=cmax:
             print "Error: image pair has missmatch size."
         for r in xrange(hws,lbp.shape[0]-hws):

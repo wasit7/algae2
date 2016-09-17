@@ -67,4 +67,5 @@ _private/
 
 #pickle
 *.pic
-*pyc
+*.pyc
+*.tree

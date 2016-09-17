@@ -14,7 +14,10 @@ To label objects,
 To prepare the feature vectors (x) and labels (y). Uncomment to check the cross val_score()
 
 # algae_train.py
-To train and save to dataset/forest.pic
+To train a tree and save to dataset/timestamp.tree.
+
+# algae_combine.py
+To cimbined all tree into dataset/forest.pic
 
 # algae_predict.py
 Using forest.pic to identify and count objects
