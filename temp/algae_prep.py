@@ -84,5 +84,5 @@ if __name__=='__main__':
 
     x,y = get_xy(train_pairs)
 
-    with open(os.path.join(dataset_path,'xy.obj'),'wb') as f:
+    with open(os.path.join(dataset_path,'xy.pic'),'wb') as f:
         pickle.dump({'x':x, 'y':y }, f, pickle.HIGHEST_PROTOCOL)

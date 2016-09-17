@@ -4,7 +4,7 @@ import os
 from sklearn.cross_validation import cross_val_score
 from sklearn.ensemble import ExtraTreesClassifier
 dataset_path="dataset"
-with open(os.path.join(dataset_path,'xy.obj'),'rb') as f:
+with open(os.path.join(dataset_path,'xy.pic'),'rb') as f:
     xy = pickle.load(f)
 x= xy['x']
 y= xy['y']
@@ -16,7 +16,7 @@ clf_et = ExtraTreesClassifier(n_estimators=10, max_depth=20,
 #print "--Extra Tree: %s"%scores.mean()
 print "--Training"
 forest=clf_et.fit( x, y)
-with open('forest.pic','wb') as f:
+with open(os.path.join(dataset_path,'forest.pic'),'wb') as f:
     pickle.dump(forest,f, pickle.HIGHEST_PROTOCOL)
 
 print '--Finished'
