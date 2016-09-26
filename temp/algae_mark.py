@@ -57,11 +57,12 @@ def reload(flist,index):
     im=cv2.resize(oim, (cmax,rmax),interpolation = cv2.INTER_CUBIC)    
     ol=im.copy()    
     ocl=cv2.imread(flist[index][:-3]+'png',0)
-    cl=cv2.resize(ocl, (cmax,rmax),interpolation = cv2.INTER_NEAREST )
+    
     #print cl.shape
-    if cl is None:# not found
+    if ocl is None:# not found
          cl=np.zeros( (im.shape[0],im.shape[1]),dtype=np.uint8 )
     else:
+        cl=cv2.resize(ocl, (cmax,rmax),interpolation = cv2.INTER_NEAREST )
         for x in xrange(cl.shape[1]):
                 for y in xrange(cl.shape[0]):
                     if cl[y,x]:
