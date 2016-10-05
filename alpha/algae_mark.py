@@ -25,14 +25,14 @@ def callback(event,x,y,flags,param):
     #print "(x, y), (flag param): (%d %d) (%d %s)"% (x, y,flags,param)
     #print cl.shape
     if flags==cv2.EVENT_FLAG_LBUTTON + cv2.EVENT_FLAG_CTRLKEY:
-        r=4
+        r=8
         for i in xrange(-r,r):
             for j in xrange(-r,r):
                 if np.sqrt( i**2 + j**2 )<r: 
                     cl[y+j,x+i]=cc
                     ol[y+j,x+i] = cmap[cc-1]
     if flags==cv2.EVENT_FLAG_LBUTTON + cv2.EVENT_FLAG_ALTKEY:
-        r=8
+        r=16
         for i in xrange(-r,r):
             for j in xrange(-r,r):
                 if np.sqrt( i**2 + j**2 )<r: 
@@ -41,7 +41,7 @@ def callback(event,x,y,flags,param):
     
         #cv2.imshow('class',cl)
     if event==cv2.EVENT_LBUTTONDOWN:
-        r=4
+        r=8
         for i in xrange(-r,r):
             for j in xrange(-r,r):
                 if np.sqrt( i**2 + j**2 )<r: 

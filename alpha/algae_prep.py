@@ -70,7 +70,7 @@ if __name__=='__main__':
     raw_list=[i[:-4] for i in raw_files]
     
     label_files=fnmatch.filter(os.listdir(dataset_path), '*.png')
-    label_list={i[:-4]:None for i in raw_files}
+    label_list={i[:-4]:None for i in label_files}
     
     train_pairs=[]
     for i in raw_list:
