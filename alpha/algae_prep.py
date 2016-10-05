@@ -11,7 +11,7 @@ from algae_core import cmap
 import pickle
 import os
 
-dataset_path='dataset'
+dataset_path='/storage/dataset'
 
 #lbp
 radius = 3
@@ -51,8 +51,9 @@ def get_xy(train_pairs):
     x=np.zeros((xrmax,xcmax), dtype=np.uint8)
     y=np.zeros((yrmax), dtype=np.uint8)
     k=0
-    for i in train_pairs:    
-        cl,im,lbp=get_image_pair(i)
+    for count,i in enumerate(train_pairs):    
+        print "------- processed %d from %d"%(count,len(train_pairs))
+	cl,im,lbp=get_image_pair(i)
         #show_overlay(cl,im)
         if im.shape[0]!=rmax or im.shape[1]!=cmax or lbp.shape[0]!=rmax or lbp.shape[1]!=cmax:
             print "Error: image pair has missmatch size."
@@ -73,8 +74,8 @@ if __name__=='__main__':
     label_list={i[:-4]:None for i in label_files}
     
     train_pairs=[]
-    for i in raw_list:
-        if i in label_list:
+    for count,i in enumerate(raw_list):
+	if i in label_list:
             train_pairs.append({
                 'raw': os.path.join(dataset_path,i)+'.jpg',
                 'label': os.path.join(dataset_path,i)+'.png',
