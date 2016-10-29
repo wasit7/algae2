@@ -1,6 +1,6 @@
 by Wasit Limprasert
 
-# algae_marker.py 
+# marker/algae_marker.py 
 To label objects,
 
 1. put all images (*.jpg) in folder /dataset
@@ -10,17 +10,11 @@ To label objects,
 5. space bar to save
 6. esc to close the window
 
-# algae_prep.py
-To prepare the feature vectors (x) and labels (y). Uncomment to check the cross val_score()
-
-# algae_train.py
-To train a tree and save to dataset/timestamp.tree.
-
-# algae_combine.py
-To cimbined all tree into dataset/forest.pic
-
-# algae_predict.py
-Using forest.pic to identify and count objects
+# notebook.ipynb
+1. To prepare the feature vectors (x) and labels (y). Uncomment to check the cross val_score()
+2. To train a tree and save to dataset/timestamp.tree.
+3. To cimbined all tree into dataset/forest.pic
+4. and finally, using forest.pic to identify and count objects
 
 
 

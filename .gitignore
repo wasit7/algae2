@@ -70,3 +70,5 @@ _private/
 *.pyc
 *.tree
 *.obj
+
+storage/
