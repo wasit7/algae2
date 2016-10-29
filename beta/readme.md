@@ -12,10 +12,10 @@ To label objects,
 
 # notebook.ipynb
 The marked images from /marker/dataset must be moved to /storage/traning or /storage/evaluation
-1. #Prepare: To prepare the feature vectors (x) and labels (y). 
-2. #Train: To train a tree and save to dataset/timestamp.tree. The cross_val_score() can be commented to accelerate the training time
-3. #Combine: To cimbined all tree into dataset/forest.pic
-4. #predict: and finally, using forest.pic to identify and count objects
+1. Prepare: To prepare the feature vectors (x) and labels (y). 
+2. Train: To train a tree and save to dataset/timestamp.tree. The cross_val_score() can be commented to accelerate the training time
+3. Combine: To cimbined all tree into dataset/forest.pic
+4. Predict: and finally, using forest.pic to identify and count objects
 
 
 
