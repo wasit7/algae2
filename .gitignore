@@ -74,4 +74,8 @@ _private/
 storage/
 .ipynb_checkpoints/
 
-media/img/
+#django algae app
+img/
+*.sqlite3
+*.sqlite
+migrations/
