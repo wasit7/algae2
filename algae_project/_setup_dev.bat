@@ -1,0 +1,1 @@
+python manage.py runscript setup_dev --traceback

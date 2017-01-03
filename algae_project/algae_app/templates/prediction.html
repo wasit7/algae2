@@ -32,8 +32,12 @@
     <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p> 
   </div>
 </div>
-{% endblock content %}{% block script %}
+{% endblock content %}
 
+{% block script %}
+<script>
+  $('#prediction').addClass('active');
+</script>
 <script src="{% static 'd3.v4.min.js' %}"></script>
 <script>
 var svg = d3.select("svg"),

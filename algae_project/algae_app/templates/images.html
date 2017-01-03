@@ -1,14 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 <h3>Fixed Navbar</h3>
 <div class="row">
   <div class="col-md-4">
-    <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
-    <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>    
+    <img src="{% static 'graph.png' %}" class="img-rounded" alt="water property" width="640" height="480"> 
   </div>
   <div class="col-md-4"> 
-    <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
-    <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
+    <img src="{% static 'graph.png' %}" class="img-rounded" alt="water property" width="640" height="480"> 
   </div>
   <div class="col-md-4"> 
     <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
@@ -16,3 +15,9 @@
   </div>
 </div>
 {% endblock content %}
+
+{% block script %}
+<script>
+  $('#images').addClass('active');
+</script>
+{% endblock script %}

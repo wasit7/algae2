@@ -1,18 +1,27 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
-<h3>Fixed Navbar</h3>
+<h3>Water Property History</h3>
+<div class="container">
+             
+  <img src="{% static 'graph.png' %}" class="img-rounded" alt="water property" width="960" height="960"> 
+</div>
 <div class="row">
-  <div class="col-md-4">
-    <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
-    <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>    
+  <div class="col-md-6">
+    <p>The data is collected by <a href="http://www.mwa.co.th/">MWA</a> including chemical and biological information between 2012 and 2015. Algal bloom occurs about once a year and tends to be more often and larger in magnitude this caused by waste water discarging from city and heavily use of fertilizer in agricultural processes.
+    </p>
+    <p>
+      From our preliminary investigation, conductiveity is over 500umho/cm and turbidity lower than 400 NTU can be used as primary indicator for predicting the algal bloom.</p>    
   </div>
-  <div class="col-md-4"> 
+  <div class="col-md-6"> 
     <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
     <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
-  </div>
-  <div class="col-md-4"> 
-    <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p>
-    <p>A fixed navigation bar stays visible in a fixed position (top or bottom) independent of the page scroll.</p> 
   </div>
 </div>
 {% endblock content %}
+
+{% block script %}
+<script>
+  $('#water').addClass('active');
+</script>
+{% endblock script %}
