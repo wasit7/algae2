@@ -519,6 +519,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/Users/Wasit/Documents/GitHub/dcollector/.gitignore",
+			"settings":
+			{
+				"buffer_size": 1072,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -544,13 +552,30 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/urls.py",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/templates/recall_list.html",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/views.py",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/models.py",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/templates/images.html",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/templates/water.html",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/templates/base.html",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/templates/prediction.html",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/static/data.tsv",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_project/urls.py",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_project/settings.py",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/admin.py",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/scripts/setup_dev.py",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/scripts/00_init_db.py",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/scripts/__init__.py",
+		"/C/Users/Wasit/Documents/GitHub/algae2/.gitignore",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/templates/blank.html",
+		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/8d6ab04d-d473-4833-b840-48e6d64b97b9.jpg",
 		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_app/templates/img_list.html",
 		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/manage.py",
 		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/wl_project/urls.py",
 		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/main/views.py",
 		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/main/urls.py",
 		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/main/templates/25a_fcr_case_request.html",
-		"/C/Users/Wasit/Documents/GitHub/algae2/algae_project/algae_project/settings.py",
 		"/C/Users/Wasit/Google Drive/Jin/Template วิทยานิพนธ์ มหาวิทยาลัยธรรมศาสตร์.html",
 		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/main/templates/fcr_tab_balance_info.html",
 		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/main/templates/tab_balance_info.html",
@@ -654,24 +679,7 @@
 		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/main/scripts/012_setup_sgroup.py",
 		"/C/Users/Wasit/Documents/GitHub/dcollector/README.md",
 		"/C/Users/Wasit/Downloads/p_gen_models (3).py",
-		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/main/scripts/p03_testing.py",
-		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/main/scripts/p02_ManageQueue.py",
-		"/C/Users/Wasit/Downloads/p03_testing.py",
-		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/main/scripts/main.py",
-		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/scripts/03_testing.py",
-		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/scripts/main.py",
-		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/scripts/__init__.py",
-		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/scripts/_initdb.py",
-		"/C/Users/Wasit/Downloads/03_testing.py",
-		"/C/Users/Wasit/Documents/GitHub/tutorials/django/django_generic_view/rest/rest/settings.py",
-		"/C/Users/Wasit/Documents/GitHub/tutorials/django/django_generic_view/rest/myapp/models.py",
-		"/C/Users/Wasit/Documents/GitHub/visionmarker/beta/app/views.py",
-		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/todo.md",
-		"/C/Users/Wasit/Documents/GitHub/visionmarker/beta/app/templates/home.html",
-		"/C/Users/Wasit/Documents/GitHub/visionmarker/beta/app/models.py",
-		"/C/Users/Wasit/Documents/GitHub/tutorials/d3/07_fireball.html",
-		"/C/Users/Wasit/Documents/GitHub/tutorials/django/django_generic_view/rest/myapp/permissions.py",
-		"/C/Users/Wasit/Documents/GitHub/tutorials/django/django_generic_view/rest/myapp/urls.py"
+		"/C/Users/Wasit/Documents/GitHub/dcollector/alpha/wl_project/main/scripts/p03_testing.py"
 	],
 	"find":
 	{
@@ -689,6 +697,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"pyc",
+			"Raw",
+			"Sample",
+			"main",
+			"blank",
 			"AccountType",
 			"media",
 			"BASE_DIR",
@@ -811,12 +824,7 @@
 			"Organization",
 			"AgreementStatus",
 			"ZipCode",
-			"StateCode",
-			"UserCode",
-			"BlockCode",
-			"LegalCode",
-			"Organization",
-			"ReasonCode"
+			"StateCode"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -856,8 +864,35 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/Wasit/Documents/GitHub/dcollector/.gitignore",
+					"settings":
+					{
+						"buffer_size": 1072,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -925,6 +960,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 50.0,
+	"side_bar_width": 178.0,
 	"status_bar_visible": true
 }
