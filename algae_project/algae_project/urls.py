@@ -23,6 +23,7 @@ admin.site.site_title = 'Algae Admin'
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^algae/', include('algae_app.urls', namespace="algae") ),
+    url(r'^$', views.water, name='home'),
 ]
 
 from django.conf import settings
