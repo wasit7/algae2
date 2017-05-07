@@ -2,6 +2,7 @@ Django==1.9.5
 django-extensions==1.7.5
 djangorestframework==3.5.3
 numpy==1.11.3
+scipy==0.16.0
 pandas==0.19.1
 Pillow==4.1.1
 jupyter==1.0.0
