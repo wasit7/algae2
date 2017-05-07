@@ -131,3 +131,10 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT=os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
+
+NOTEBOOK_ARGUMENTS = [
+    '--ip', '*',
+    '--port', '8999',
+    '--no-browser',
+    '--allow-root'
+]
