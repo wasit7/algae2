@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import url, include
+from algae_app import views
 
 admin.site.site_header = 'Algae Admin'
 admin.site.site_title = 'Algae Admin'
