@@ -76,7 +76,6 @@ storage/
 
 #django algae app
 img/
-media/
 *.sqlite3
 *.sqlite
 migrations/
